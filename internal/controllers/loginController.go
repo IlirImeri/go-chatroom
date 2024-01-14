@@ -2,9 +2,13 @@
 
 package controllers
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"database/sql"
 
-func Login(c *fiber.Ctx) error {
+	"github.com/gofiber/fiber/v2"
+)
+
+func Login(c *fiber.Ctx, db *sql.DB) error {
 	// Your login logic here
 	return c.SendString("Login handler")
 }
